@@ -3,6 +3,7 @@ const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 
 const { typeDefs, resolvers } = require('./schemas'); // for Apollo server
+const { authMiddleware } = require('./utils/auth'); // for resolver context
 const db = require('./config/connection'); // MongoDB 
 // const routes = require('./routes');
 
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  context: authMiddleware,
 });
 
 // middlewares
