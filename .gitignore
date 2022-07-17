@@ -1,2 +1,4 @@
 CRITERIA-Assets
 CRITERIA-README.md
+.DS_Store
+node_modules
