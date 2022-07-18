@@ -1,4 +1,6 @@
 const { Book, User } = require('../models');
+const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
   Query: {
@@ -27,12 +29,8 @@ const resolvers = {
 
       return { token, user };
     },
-    createUser: async (parent, newUser ) => {
-      const user = await User.create(newUser);
-
-      if (!user) {
-        // throw new console.error();
-      }
+    addUser: async (parent, { username, email, password } ) => {
+      const user = await User.create({ username, email, password });
       const token = signToken(user);
       return { token, user };
     },
@@ -47,7 +45,7 @@ const resolvers = {
         return updatedUser;
       } catch (err) {
         console.log(err);
-        return res.status(400).json(err);
+        return "Something went wrong";
       }
     },
     delete: async (parent, { username }, context) => {
