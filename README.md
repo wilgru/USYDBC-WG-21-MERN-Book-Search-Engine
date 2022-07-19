@@ -48,7 +48,7 @@ This will install all dependancies for the server and client too.
 <a name="Link"></a>
 ## Link 
 
-You can visit the deployed web app [here](https://immense-plateau-33075.herokuapp.com/).
+You can visit the deployed web app [here](https://usydbc-21-book-search-engine.herokuapp.com/).
 
 <a name="License"></a>
 ## License
