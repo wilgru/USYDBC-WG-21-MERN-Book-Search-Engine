@@ -4,7 +4,7 @@
 
 ## Description
 
-
+The Book Search Engine is a website where you can search and browse books from Google's database of recorded books and save them into your own personal library, by creating an account. The search engine not only returns books and their titles, but also the authors, descriptions and even an image of the cover.
 
 ## Table of Contents
  
@@ -43,7 +43,7 @@ make sure you have all dependencies installed by 'cd'ing to the root directory a
 npm install
 ```
 
-This will install all dependancies for the front-end and back-end too.
+This will install all dependancies for the server and client too.
 
 <a name="Link"></a>
 ## Link 
